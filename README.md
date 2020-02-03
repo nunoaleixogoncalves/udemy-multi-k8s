@@ -1,4 +1,4 @@
-# multi-docker
+# multi-k8s
 udemy course docker &amp; kubernetes 
 
 
