@@ -1,0 +1,53 @@
+kebectl apply -f <file>
+kubectl describe <type> <name>
+kubectl delete -f <file>
+kubectl delete <type> <name>
+
+kubectl get <type> -o wide
+kubectl get <type>
+<type> = pods/services/deployments/pv/pvc/secrets
+
+kubectl set image deployment/client-deployment client=nunoaleixogoncalves/multi-client:1.0.0
+
+kubectl create secret <type> <name> --from-literal <key=value>
+<type> = generic/docker-registry/tls
+
+minikube docker-env
+eval $(minikube docker-env)
+docker ps
+
+kubectl logs client-deployment-64fd548cc-qc2kk
+docker logs 
+
+kubectl exec -it client-deployment-64fd548cc-qc2kk
+docker exec -it
+
+docker system prune -a // clean cache inside node after docker configured
+
+minikube addons enable ingress
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.28.0/deploy/static/mandatory.yaml
+
+kubectl get svc -n ingress-nginx
+
+kubectl get namespaces
+kubectl -n cattle-system get all
+
+
+minikube start
+minikube delete
+minikube ip
+minikube dashboard
+
+
+
+
+
+
+
+
+
+
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.28.0/deploy/static/mandatory.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.28.0/deploy/static/provider/baremetal/service-nodeport.yaml
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345
