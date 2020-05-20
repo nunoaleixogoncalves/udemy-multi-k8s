@@ -39,20 +39,9 @@ minikube ip
 minikube dashboard
 
 
-
-
-
-
-
-
-
-
-
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.28.0/deploy/static/mandatory.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.28.0/deploy/static/provider/baremetal/service-nodeport.yaml
 kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345
-
-
 
 
 docker run -it -v $(pwd):/app ruby:2.4 sh
