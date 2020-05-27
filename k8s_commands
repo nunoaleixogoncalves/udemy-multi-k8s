@@ -103,5 +103,4 @@ In the "Ingress Config for HTTPS" lecture, we need to change one of the annotati
 
 certmanager.k8s.io/cluster-issuer: 'letsencrypt-prod'
 change to:
-
 cert-manager.io/cluster-issuer: "letsencrypt-prod"
